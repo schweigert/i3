@@ -23,3 +23,10 @@ vim ~/.i3/config
 
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# ntpd time service
+systemctl disable ntpd.service
+systemctl stop ntpd.service
+systemctl start systemd-timesyncd.service
+systemctl enable systemd-timesyncd.service
+systemctl restart ntpd.service
