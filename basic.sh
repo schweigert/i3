@@ -14,6 +14,9 @@ sudo pacman -S snapd \
 sudo systemctl enable --now docker.socket
 sudo systemctl enable --now snapd.socket
 
+# Enable --classic
+sudo ln -s /var/lib/snapd/snap /snap
+
 # Change Pale Moon to brave
 vim /home/$USER/.profile
 vim /home/$USER/.config/mimeapps.list
@@ -51,7 +54,13 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 asdf plugin-add nodejs
 
 # git
-
 ssh-keygen -t ed25519 -C "marlon.schweigert@krakenlab.io"
 git config --global user.name "Marlon Henry Schweigert"
 git config --global user.email "marlon.schweigert@krakenlab.io"
+
+# Remove sudo from docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+# Sync Time Server
+sudo timedatectl set-ntp true
