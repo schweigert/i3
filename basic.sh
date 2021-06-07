@@ -1,5 +1,3 @@
-# Basic pacman setup
-
 sudo pacman -Syu
 
 # pulseaudio
