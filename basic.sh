@@ -14,3 +14,5 @@ vim /home/$USER/.config/mimeapps.list
 
 vim ~/.i3/config
 # bindsym $mod+F2 exec brave
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
