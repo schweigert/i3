@@ -7,7 +7,12 @@ sudo pacman -S snapd \
                pacaur \
                asoundconf \
                feh \
-               pavucontrol
+               pavucontrol \
+               docker \
+               docker-compose
+
+sudo systemctl enable --now docker.socket
+sudo systemctl enable --now snapd.socket
 
 # Change Pale Moon to brave
 vim /home/$USER/.profile
@@ -35,3 +40,12 @@ sudo snap install brave
 sudo snap install spotify
 sudo snap install slack --classic
 sudo snap install code --classic
+
+# asdf
+
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+
+# ~/.zshrc
+. $HOME/.asdf/asdf.sh
+
+asdf plugin-add nodejs
