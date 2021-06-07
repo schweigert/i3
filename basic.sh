@@ -30,3 +30,6 @@ systemctl stop ntpd.service
 systemctl start systemd-timesyncd.service
 systemctl enable systemd-timesyncd.service
 systemctl restart ntpd.service
+
+# pulseaudio
+install_pulse
