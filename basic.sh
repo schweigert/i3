@@ -2,10 +2,14 @@
 
 sudo pacman -Syu
 
+# pulseaudio
+install_pulse
+
 sudo pacman -S snapd \
                pacaur \
                asoundconf \
-               feh
+               feh \
+               pavucontrol
 
 sudo pacaur -S brave
 
@@ -30,6 +34,3 @@ systemctl stop ntpd.service
 systemctl start systemd-timesyncd.service
 systemctl enable systemd-timesyncd.service
 systemctl restart ntpd.service
-
-# pulseaudio
-install_pulse
