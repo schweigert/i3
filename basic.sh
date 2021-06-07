@@ -16,3 +16,7 @@ vim ~/.i3/config
 # bindsym $mod+F2 exec brave
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Monitors
+xrandr -q
+xrandr --output eDP1 --auto --output HDMI2 --auto --right-of eDP1 --rotate left
