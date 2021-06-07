@@ -9,8 +9,6 @@ sudo pacman -S snapd \
                feh \
                pavucontrol
 
-sudo pacaur -S brave
-
 # Change Pale Moon to brave
 vim /home/$USER/.profile
 vim /home/$USER/.config/mimeapps.list
@@ -32,3 +30,8 @@ systemctl stop ntpd.service
 systemctl start systemd-timesyncd.service
 systemctl enable systemd-timesyncd.service
 systemctl restart ntpd.service
+
+sudo snap install brave
+sudo snap install spotify
+sudo snap install slack --classic
+sudo snap install code --classic
